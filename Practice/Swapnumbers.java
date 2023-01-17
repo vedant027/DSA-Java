@@ -1,12 +1,20 @@
 public class Swapnumbers {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
+//        int a = 10;
+//        int b = 20;
+//
+//        int temp = a;
+//        a= b;
+//        b = temp;
+//
+//        System.out.println(a + " " + b);
 
-        int temp = a;
-        a= b;
-        b = temp;
+        String name = "Vedant Thorat";
+        changeName(name);
+        System.out.println(name);
+    }
 
-        System.out.println(a + " " + b);
+    static void changeName(String naam){
+        naam = "Robert"; // creating a new object
     }
 }
