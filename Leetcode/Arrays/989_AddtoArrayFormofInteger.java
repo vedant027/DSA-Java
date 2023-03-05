@@ -5,8 +5,10 @@ public class AddtoArrayFormofInteger {
                 int n = num.length;
                 int i = n-1;
                 List<Integer> ans = new ArrayList();
+                // Implementing OR condition for checking the parameters
                 while (i >= 0 || k > 0){
                     if (i >= 0){
+                        // Taking out individual digits
                         k = k + num[i];
                         ans.add(k % 10);
                         k = k / 10;
