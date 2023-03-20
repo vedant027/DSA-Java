@@ -2,6 +2,7 @@ public class KidsWiththeGreatestNumberofCandies {
     public static void main(String[] args) {
         class Solution {
             public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+//                Creating arraylist of boolean type
                 List<Boolean> ans = new ArrayList<>();
                 for(int i=0; i<candies.length; i++){
                     boolean test = false;
