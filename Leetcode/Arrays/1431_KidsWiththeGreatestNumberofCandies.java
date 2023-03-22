@@ -1,24 +1,19 @@
 public class KidsWiththeGreatestNumberofCandies {
     public static void main(String[] args) {
         class Solution {
-            public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-//                Creating arraylist of boolean type
-                List<Boolean> ans = new ArrayList<>();
-                for(int i=0; i<candies.length; i++){
-                    boolean test = false;
-                    for(int j=0; j<candies.length; j++){
-                        if(candies[i] + extraCandies < candies[j]){
-                            test = true;
-                            break;
-                        }
+            public int[] smallerNumbersThanCurrent(int[] nums) {
+                int n = nums.length;
+                int[] arr = new int[n];
+                for (int i = 0; i < n; i++) {
+                    int count = 0;
+                    // Creating an array for counting smaller numbers
+                    for (int j = 0; j < n; j++) {
+                        if (nums[j] < nums[i])
+                            count++;
                     }
-                    if(test){
-                        ans.add(false);
-                    } else{
-                        ans.add(true);
-                    }
+                    arr[i] = count;
                 }
-                return ans;
+                return arr;
             }
         }
     }
