@@ -2,14 +2,14 @@ public class CreateTargetArrayintheGivenOrder {
     public static void main(String[] args) {
         class Solution {
             public int[] createTargetArray(int[] nums, int[] index) {
-                List<Integer> list = new ArrayList<>();
-                for(int i=0; i<nums.length; i++)
-                    list.add(index[i], nums[i]);
-                int[] res = new int[nums.length];
-                for(int i=0; i<list.size(); i++)
-                    res[i] = list.get(i);
-
-                return res;
+                int[] target = new int[index.length];
+                for (int i = 0; i < index.length; i++) {
+                    for(int j = target.length - 1; j > index[i]; j--){
+                        target[j] = target[j - 1];
+                    }
+                    target[index[i]] = nums[i];
+                }
+                return target;
             }
         }
     }
